@@ -3,7 +3,7 @@
 
 A CKAN extension that helps protect your portal from brute-force login attacks by **tracking failed login attempts** and **temporarily locking accounts or IPs** after too many failures.
 
-The original code was taken as an base from [ckanext-securit](https://github.com/data-govt-nz/ckanext-security).
+The original code was taken as an base from [ckanext-security](https://github.com/data-govt-nz/ckanext-security).
 
 Check the [documentation](https://datashades.github.io/ckanext-login-throttle/).
 
