@@ -1,0 +1,14 @@
+# login_throttle-js:
+#   filter: rjsmin
+#   output: ckanext-login_throttle/%(version)s-login_throttle.js
+#   contents:
+#     - js/login_throttle.js
+#   extra:
+#     preload:
+#       - base/main
+
+# login_throttle-css:
+#   filter: cssrewrite
+#   output: ckanext-login_throttle/%(version)s-login_throttle.css
+#   contents:
+#     - css/login_throttle.css

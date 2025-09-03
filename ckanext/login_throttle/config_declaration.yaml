@@ -1,0 +1,15 @@
+version: 1
+groups:
+    - annotation: login_throttle configuration
+      options:
+          - key: ckanext.login_throttle.lock_timeout
+            type: int
+            default: 900
+          - key: ckanext.login_throttle.login_max_count
+            type: int
+            default: 10
+          - key: ckanext.login_throttle.brute_force_key
+          - key: ckanext.login_throttle.brute_force_footer_path
+          - key: ckanext.login_throttle.disable_lock_notification
+            type: bool
+            default: false
