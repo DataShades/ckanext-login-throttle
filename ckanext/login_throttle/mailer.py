@@ -15,7 +15,7 @@ log = logging.getLogger(__name__)
 def _build_footer_content(extra_vars):
     custom_path = throttle_config.login_throttle_footer_path()
     if custom_path and os.path.exists(custom_path):
-        log.warning("Overriding brute force lockout email footer with %s", custom_path)
+        log.info("Overriding brute force lockout email footer with %s", custom_path)
         with open(custom_path, "r") as footer_file:
             footer_content = footer_file.read()
         env = flask.current_app.jinja_env

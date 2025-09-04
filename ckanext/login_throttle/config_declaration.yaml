@@ -5,11 +5,21 @@ groups:
           - key: ckanext.login_throttle.lock_timeout
             type: int
             default: 900
+            description: |
+              (integer) (optional) The time User is going to be locked while reaching the Attempts limit. By default its `900` seconds (e.g. 15 minutes).
           - key: ckanext.login_throttle.login_max_count
             type: int
             default: 10
+            description: |
+              (integer) (optional) The amount of tries User can do before being locked. By default its `10`.
           - key: ckanext.login_throttle.brute_force_key
+            description: |
+              (optional) Updates the logic based on what information the User will be locked. By default it using IP Address. Accepts only and string `user_name` value as an alternative to lock User by `name`.
           - key: ckanext.login_throttle.brute_force_footer_path
+            description: |
+              (path) (optional) Can be used to override the footer text of the Email notification. By default it takes local file in the repo `lockout_footer.txt`.
           - key: ckanext.login_throttle.disable_lock_notification
             type: bool
             default: false
+            description: |
+              (boolean) (optional) If `True` provided, notification won't be sent to the User. By default its `False`.

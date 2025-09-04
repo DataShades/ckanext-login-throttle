@@ -84,7 +84,7 @@ class LoginThrottle(object):
 
     def needs_lockout(self):
         if self.user is not None and self.count == self.login_max_count:
-            log.info("%s locked out by brute force protection", self.user.name)
+            log.warning("%s locked out by brute force protection", self.user.name)
             if not throttle_config.login_throttle_block_lock_notification():
                 try:
                     notify_lockout(self.user, self.login_lock_timeout)
